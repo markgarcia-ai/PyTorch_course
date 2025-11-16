@@ -1,14 +1,49 @@
-import torch
+# Read lines -> Lowercase -> Filter -> Count
+"""
+lines = read_lines("logs.txt")
+filtered = filter_keyword(lines, "error")
+counter = count_items(filtered)
 
-x = torch.tensor([25.0])
-x = x.unsqueeze(0)
-x = x.squeeze()
-print(x.shape)
+for c in counter:
+    print("Matches:", c)
+"""
 
-x = torch.tensor([1,2,3,4,5])
+import sys
 
-print("FROM PYTHON LISTS:", x)
-print("TENSOR DATA TYPE:", x.dtype)
+class FileReader:
+    def __init__(self, file_path):
+        self.file_path = file_path
+        self.lines = []
 
-zeros = torch.zeros((3,4))
-print("ZEROS TENSOR:", zeros)
+    def read_lines(self):
+        with open(self.file_path, 'r') as file:
+            self.lines = file.readlines()
+        return self.lines
+
+class KeywordFilter:
+    def __init__(self, lines, keyword):
+        self.lines = lines
+        self.keyword = keyword
+
+    def filter_keyword(self):
+        return [line for line in self.lines if self.keyword in line.lower()]
+
+class Counter(items):
+    def __init__(self,items):
+        self.items = items
+
+    def count(self)
+        return len(self.items)
+
+
+if __name__ == "__main__":
+    reader = FileReader("logs.txt")
+    lines = reader.read_lines()
+    filter = KeywordFilter(lines, "error")
+    filtered = filter.filter_keyword()
+    counter = Counter(filtered)
+    print(counter.count())
+    print(filtered)
+    print(lines)
+    print("Matches:", counter.count())
+    sys.exit(0)

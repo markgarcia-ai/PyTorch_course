@@ -1,0 +1,15 @@
+[2025-01-12 10:22:01] INFO Starting system initialization...
+[2025-01-12 10:22:02] DEBUG Loading configuration values...
+[2025-01-12 10:22:05] WARNING Low memory detected in module A
+[2025-01-12 10:22:10] INFO Connecting to database...
+[2025-01-12 10:22:12] ERROR Database connection timeout
+[2025-01-12 10:22:15] INFO Retrying database connection...
+[2025-01-12 10:22:20] ERROR Failed to connect after retry attempts
+[2025-01-12 10:22:25] DEBUG Cache refreshed successfully
+[2025-01-12 10:22:30] INFO User login attempt: admin
+[2025-01-12 10:22:32] ERROR Invalid password for user admin
+[2025-01-12 10:22:35] INFO User login attempt: guest
+[2025-01-12 10:22:36] WARNING Guest user not allowed access to protected module
+[2025-01-12 10:22:40] INFO System shutdown initiated
+[2025-01-12 10:22:41] ERROR Shutdown sequence failed to complete
+[2025-01-12 10:22:45] INFO System halted unexpectedly
